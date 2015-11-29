@@ -1,0 +1,6 @@
+﻿# Ceremony just cannot be completed avoided using any kind of infrastructure :(
+# This command is used to bind a certificate to the port used for SSL for this application
+# Before running this command you would have had to generate a certificate and isntalled it on the machine
+# so this command will be able to find it by thumbprint. It needs to go in the Computer cert collection too
+# because it will be loaded by a driver (http.sys)
+netsh http add sslcert ipport=0.0.0.0:8000 certhash=8AAB319361944C31BA2AB724A713F46F0E190078 appid={7883A68C-7943-41E3-90EE-7A4361379D7F}

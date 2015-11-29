@@ -1,0 +1,22 @@
+<html ng-app="weatheramaModule">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="scripts/lib/angular.js" type="text/javascript"></script>
+    <script src="scripts/lib/angular-cookies.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>
+    Weatherama Home
+</h1>
+<button twitter-sign-in ng-click="signIn()" ng-show="!isSignedIn">Sign in to Twitter</button>
+<button twitter-sign-in ng-click="signOut()" ng-show="isSignedIn">Sign out</button>
+<h3> Welcome <span user-information>{{userScreenName}}</span></h3>
+<script src="scripts/app/app.js" type="text/javascript"></script>
+<script src="scripts/directives/twitterSignIn.js" type="text/javascript"></script>
+<script src="scripts/directives/userInformation.js" type="text/javascript"></script>
+<script src="scripts/services/apiClient.js" type="text/javascript"></script>
+<script src="scripts/services/userInfo.js" type="text/javascript"></script>
+
+</body>
+</html>
